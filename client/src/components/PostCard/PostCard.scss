@@ -1,0 +1,72 @@
+.Container {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border-width: 0.1px;
+    border-color: gray;
+    //box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.33);
+    transition: box-shadow 0.3s ease;
+    padding: 20px;
+  }
+  
+  .Container:hover {
+    box-shadow: 0px 6px 12px #4285F4;
+  }
+
+.Container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Description {
+    color: rgb(66, 66, 66);
+    text-align: center;
+    font-size: small;
+}
+
+.Titulo {
+    text-align: center;
+    font-size: small;
+}
+
+.Image {
+  width: 100%;
+  height: 150px;
+    border-radius: 50%;
+}
+
+.Precio {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.EliminarButtonContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1; 
+  }
+  
+  .EliminarButton {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .IconoPapelera {
+    vertical-align: middle;
+    margin-right: 5px; /* Ajusta el valor para controlar el espaciado entre el icono y el texto */
+  }
+
+  .cuidado {
+    position: absolute;
+  top: 10px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+  right: 10px; /* Ajusta la distancia desde la derecha según tus necesidades */
+  color: orange; /* Color del ícono de cuidado */
+  font-size: 34px; /* Tamaño del ícono de cuidado, ajusta según tus necesidades */
+  z-index: 1;
+  }

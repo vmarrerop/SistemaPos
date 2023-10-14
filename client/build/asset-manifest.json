@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sistemaposcliente/static/css/main.c4c32255.css",
+    "main.js": "/sistemaposcliente/static/js/main.91a7eb7b.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/sistemaposcliente/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/sistemaposcliente/index.html",
+    "main.c4c32255.css.map": "/sistemaposcliente/static/css/main.c4c32255.css.map",
+    "main.91a7eb7b.js.map": "/sistemaposcliente/static/js/main.91a7eb7b.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/sistemaposcliente/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4c32255.css",
+    "static/js/main.91a7eb7b.js"
+  ]
+}
