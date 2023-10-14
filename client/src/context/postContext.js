@@ -14,7 +14,7 @@ export const PostProvider = ({ children }) => {
 
   const getPosts = async () => {
     try {
-      const res = await axios.get("/api/posts");
+      const res = await axios.get("https://server-pos-06ua.onrender.com/api/posts/api/posts");
       setPosts(res.data);
     } catch (error) {
       console.error(error);
