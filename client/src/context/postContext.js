@@ -27,7 +27,7 @@ export const PostProvider = ({ children }) => {
 
   const deletePost = async (id) => {
     try {
-      const res = await axios.delete("/api/posts/" + id);
+      const res = await axios.delete("https://server-pos-06ua.onrender.com/api/posts/" + id);
       if (res.status === 204) {
         setPosts(posts.filter((post) => post._id !== id));
       }
@@ -42,7 +42,7 @@ export const PostProvider = ({ children }) => {
       for (let key in post) {
         form.append(key, post[key]);
       }
-      const res = await axios.post("/api/posts", form, {
+      const res = await axios.post("https://server-pos-06ua.onrender.com/api/posts", form, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -55,7 +55,7 @@ export const PostProvider = ({ children }) => {
 
   const getPost = async (id) => {
     try {
-      const res = await axios.get("/api/posts/" + id);
+      const res = await axios.get("https://server-pos-06ua.onrender.com/api/posts/" + id);
       return res.data;
     } catch (error) {
       console.error(error);
@@ -68,7 +68,7 @@ export const PostProvider = ({ children }) => {
       for (let key in post) {
         form.append(key, post[key]);
       }
-      const res = await axios.put("/api/posts/" + id, form, {
+      const res = await axios.put("https://server-pos-06ua.onrender.com/api/posts/" + id, form, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
