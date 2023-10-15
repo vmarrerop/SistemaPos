@@ -1,0 +1,105 @@
+/* Service.scss */
+
+.payment-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px; /* Ancho máximo del modal */
+    height: 70vh; /* Altura automática según el contenido */
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.827); /* Un fondo semitransparente */
+    z-index: 999; /* Asegúrate de que esté por debajo del modal */
+  }
+  
+  .modal-title {
+    font-size: 24px; /* Tamaño del título */
+    margin-bottom: 20px; /* Espacio entre el título y el valor total */
+    text-align: center;
+  }
+  
+  .total-amount {
+    font-size: 36px; /* Tamaño grande para el valor total */
+    margin-bottom: 20px; /* Espacio entre el valor total y las opciones de pago */
+    text-align: center;
+  }
+  
+  .payment-options {
+    padding: 20px;
+  }
+  
+  .payment-option {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    padding: 10px;
+    border-width: 2px;
+    border-radius: 50%;
+    border-color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+    cursor: pointer;
+    &:hover {
+      background-color: orange;
+    }
+  }
+  
+  
+  .close-button {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 10px; /* Ajusta la distancia desde la parte derecha */
+    margin: 0;
+    padding: 10px 20px;
+    background: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    background: #999;
+  }
+  
+  /* Estilos CSS para las opciones de pago */
+.payment-options {
+    display: flex;
+    justify-content: space-between; /* Distribuye las opciones de pago en el espacio disponible */
+    margin-top: 20px; /* Espacio superior entre el valor total y las opciones de pago */
+  }
+  
+  .payment-option {
+    text-align: center; /* Centra el texto */
+  }
+  
+  .icono1{
+    color: green;
+    font-size: 30px;
+  }
+
+  .icono2{
+    color: purple;
+    font-size: 30px;
+  }
+  .icono3{
+    color: gray;
+    font-size: 30px;
+  }
