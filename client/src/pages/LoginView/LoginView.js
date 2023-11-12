@@ -83,6 +83,8 @@ export function LoginView () {
       </div>
     </div>
 
+    <footer className='footer'>POWERED BY Train | Caja Maestra</footer>
+
   </div>
 </>
   );

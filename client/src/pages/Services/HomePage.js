@@ -116,7 +116,7 @@ export function HomePage() {
       );
   
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
         {posts.map((post) => (
           <PostCard
             key={post._id}
@@ -145,7 +145,7 @@ export function HomePage() {
     }
   
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 gap-4">
         {groupedProducts.map((row, rowIndex) => (
           <div key={rowIndex} className="flex">
             {row.map((post) => (
@@ -188,12 +188,11 @@ export function HomePage() {
 
 
 <div className="ml-9">
-<h1 className="usuario">Bienvenida <span className="pos">PAULA</span></h1>
 </div>
-<div className="md:w-2/3 Factura md:w-90 md:m-9 px-4 md:px-5">
+<div className="md:w-1/3 Factura md:w-90 md:m-9 px-4 md:px-5">
 <div>
 <div className="flex items-center container-titulo">
-  <h1 className="font-bold titulo text-2xl overline mt-1">Factura de venta</h1>
+  <h1 className="font-bold titulo text-2xl mt-1">Factura de venta</h1>
   <div className="ml-9 adicionar md:hidden cursor-pointer text-center" onClick={() => setIsProductModalOpen(!isProductModalOpen)}>
     <AiOutlineAppstoreAdd className="mb-2 icon-agregar" />
   </div>
@@ -221,7 +220,6 @@ export function HomePage() {
 
 
     </div>
-          <hr />
           <div className="flex items-center cliente">
             <p>Cliente: </p>
             <select className="select">
@@ -242,17 +240,17 @@ export function HomePage() {
     selectedProducts.map((product) => (
       <div key={product._id} className="informacion-producto">
         <div className="flex justify-between items-center">
-          <div className="font-sm md:font-bold w-1/4">{product.title}</div>
+          <div className="font-sm text-white md:font-bold w-1/4">{product.title}</div>
           <div className="sumar ml-8 flex justify-center items-center w-1/3">
             <button onClick={() => handleDecrement(product)}>
-              <AiOutlineMinusCircle className="text-white" />
+              <AiOutlineMinusCircle className="" />
             </button>
-            <div className="mx-2 text-white">{getProductQuantity(product)}</div>
+            <div className="mx-2">{getProductQuantity(product)}</div>
             <button onClick={() => handleIncrement(product)}>
-              <AiOutlinePlusCircle className="text-white" />
+              <AiOutlinePlusCircle className="" />
             </button>
           </div>
-          <div className="text-sm w-1/4 text-right">
+          <div className="text-sm text-white w-1/4 text-right">
             ${product.precio * getProductQuantity(product)}
           </div>
         </div>

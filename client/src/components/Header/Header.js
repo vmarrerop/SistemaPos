@@ -29,27 +29,10 @@ export function Header() {
         </button>
       </div>
 
-      <div className="modal-button center-content md:hidden">
+      <div className="modal-button center-content">
         <button onClick={openModal} className="options-button">
           <LuMenuSquare className="icon" />
         </button>
-      </div>
-
-      <div className="center-content hidden md:flex justify-center">
-        <Link to="/Inventario" className="icon-container">
-          <p className="icon-label1">Inventario</p>
-        </Link>
-        <div className="icon-container">
-          <p className="icon-label2">Nómina</p>
-        </div>
-        <div className="icon-container">
-        <Link to="/Facturas" className="icon-container">
-          <p className="icon-label3">Registros</p>
-          </Link>
-        </div>
-        <div className="icon-container">
-          <p className="icon-label4">Analítica</p>
-        </div>
       </div>
 
       <div className="right-content">

@@ -11,7 +11,7 @@ import './App.scss';
 function App() {
   return (
     <>
-    <div className="min-h-screen flex justify-center items-center">
+    <div className="min-h-screen flex justify-center items-center Main">
       <div className="w-full">
         <PostProvider>
           <Routes>

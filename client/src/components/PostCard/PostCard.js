@@ -18,5 +18,4 @@ export function PostCard({ post, onEdit }) {
       </div>
     </div>
   );
-  
 }

@@ -1,11 +1,11 @@
 import { usePosts } from "../../context/postContext";
 import './Inventario.scss';
 import '../../App.scss'
-import { PostCard } from "../../components/PostCard/PostCard";
+import { PostInventario } from "../../components/PostInventario/PostInventario";
 import React, { useState } from 'react';
 import { ModalComponent } from "../../components/Modal/ModalCreateItem";
 import { Header } from "../../components/Header/Header";
-import { ListaInventario } from "../../components/ListaInventario/ListaInventario";
+//import { ListaInventario } from "../../components/ListaInventario/ListaInventario";
 
 export function Inventario() {
   const { posts } = usePosts();
@@ -23,18 +23,18 @@ export function Inventario() {
       );
     }
   
-    const productsPerRow = 2; // Número de productos por fila
+    const productsPerRow = 1; // Número de productos por fila
     const groupedProducts = [];
     for (let i = 0; i < posts.length; i += productsPerRow) {
       groupedProducts.push(posts.slice(i, i + productsPerRow));
     }
   
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-4">
         {groupedProducts.map((row, rowIndex) => (
           <div key={rowIndex} className="flex">
             {row.map((post) => (
-              <PostCard
+              <PostInventario
                 key={post._id}
                 post={post}
                 onEdit={() => handleEditProduct(post)}
@@ -54,6 +54,7 @@ export function Inventario() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  
 
   const handleEditProduct = (product) => {
     const isSelected = selectedProducts.some((selectedProduct) => selectedProduct._id === product._id);
@@ -90,12 +91,14 @@ export function Inventario() {
         <button onClick={openModal} className="boton-crear mr-5">
           Nuevo
         </button>
+        
       </header>  
       <div className="Productos-Inventario2">
       {renderPost1()}
       </div>
-
-      <div className={`main-content ${selectedColor} Productos-Inventario background-main`}>
+      
+      <div className={`main-content ${selectedColor}`}>
+      {/*
         <table className="ProductTable">
           <thead>
             <tr>
@@ -119,28 +122,26 @@ export function Inventario() {
             ))}
           </tbody>
         </table>
+        */}
         <ModalComponent
           isOpen={isModalOpen}
           onRequestClose={closeModal}
         />
       </div>
 
-      <div className="centro">
-        <div className="inventario-total">
-          <div className="total-info">
-            <p className="total">Número total de productos:</p>
-            <p className="ultimo">{totalProducts}</p>
-          </div>
-          <div className="total-info">
-            <p className="total">Cantidad total de unidades:</p>
-            <p className="ultimo">{totalUnits}</p>
-          </div>
-          <div className="total-info">
-            <p className="total overline">Valor total del inventario:</p>
-            <p className="ultimo">${totalValue.toFixed(2)}</p>
-          </div>
+      <div className="centro0">
+        
+        <div className='seccion-izquierda flex flex-col justify-center items-center'>
+          <p className='message'>INFORMACIÓN</p>
+        </div>
+        <div className='derecha  flex flex-col justify-center items-center'>
+        <p className="total">Número total de productos: <span>{totalProducts}</span></p>
+        <p className="total">Cantidad total de unidades: <span>{totalUnits}</span></p>
+        <p className="total">Valor total del inventario: <span>${totalValue.toFixed(2)}</span></p>
         </div>
       </div>
+
+
     </div>
   </div>
 </div>
