@@ -6,13 +6,14 @@ export function LoginView () {
   return (
     <>
   <div className="main-container min-h-screen flex flex-col justify-center items-center">
-    <h1 className="title pos md:text-4xl lg:text-6xl">
-      <span className='X'>C</span>a<span className='O'>j</span>a
+    
+    <div className='message-capsule'>
+      <p className='message'>Administra de forma increíble con</p>
+    </div>
+    <h1 className="title pos">
+      Caja Maestra
     </h1>
-    <h1 className='title pos md:text-4xl lg:text-6xl'>
-      M<span className='B'>a</span>es<span className='O'>t</span><span className='X'>r</span>a
-    </h1>
-    <Link to="/services" className="services-button bg-blue-500 text-white px-4 py-2 mt-4">
+    <Link to="/services" className="services-buttonn ">
       INGRESAR
     </Link>
   </div>
