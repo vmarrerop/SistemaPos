@@ -1,0 +1,57 @@
+.Container {
+  position: relative;
+  background-color: white;
+  width: 100%; /* Mostrar dos productos por fila en pantallas pequeñas */
+  border-radius: 20px;
+  border: 0.1px solid #4285F4;
+  transition: box-shadow 0.3s ease;
+  padding: 20px;
+  margin: 1%; /* Agregamos un pequeño margen entre los productos */
+  box-sizing: border-box; /* Evita que el margen agregue ancho adicional */
+  display: inline-block; /* Permite que los elementos fluyan en línea */
+}
+
+@media (max-width: 768px) {
+  .Container {
+    /* Ajusta el tamaño de las cartas para pantallas pequeñas */
+    width: 48%; /* Por ejemplo, muestra dos cartas por fila */
+    margin: 1%; /* Puedes ajustar el margen según tus preferencias */
+  }
+}
+
+.Container:hover {
+  box-shadow: 0px 6px 12px #4285F4;
+}
+
+.Container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Titulo {
+  text-align: center;
+  font-size: small;
+}
+
+.Image {
+  width: 100%;
+  max-width: 120px; /* Limita el ancho máximo de la imagen */
+  height: 115px; /* Permite que la altura se ajuste automáticamente */
+  border-radius: 50%;
+}
+
+.Precio {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.cuidado {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: orange;
+  font-size: 25px;
+}
+
