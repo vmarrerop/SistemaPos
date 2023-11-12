@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.scss';
-import { LuMonitorSmartphone } from 'react-icons/lu'
-import { IoIosPhonePortrait } from 'react-icons/io'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import images from './productos.jpg'
 
 
 export function LoginView () {
@@ -13,11 +12,11 @@ export function LoginView () {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 0,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000, // Ajusta la velocidad de reproducción según tus necesidades
+    autoplaySpeed: 4000, // Ajusta la velocidad de reproducción según tus necesidades
     cssEase: 'linear',
     arrows: false,
   };
@@ -30,11 +29,12 @@ export function LoginView () {
       <div className='seccion-izquierda w-2/3 flex flex-col justify-center items-center'>
         <p className='message'>Administra de forma increíble con</p>
       </div>
-      <div className='seccion-derecha w-1/3 flex flex-col justify-center items-center'>
+      <div className='derecha w-1/3 flex flex-col justify-center items-center'>
         
       </div>
     </div>
-
+    
+    
 
      <div className='seccion-titulo flex flex-col justify-center items-center'>
         <h1 className="title pos">
@@ -47,31 +47,41 @@ export function LoginView () {
      </div>
 
     
-
-    <div className='message-capsule2'>
-      <div className='seccion-izquierda w-3/5 flex flex-col justify-center items-center'>
-        <Slider className="slider" {...settings}>
+    <div className='message-capsule'>
+      <div className='seccion-izquierda w-1/2 flex flex-col justify-center items-center'>
+        <Slider className='slider' {...settings}>
           <div>
-            <h1>Facturación</h1>
+            <img src={images} alt="imagen" className='icono-inicio2' />
           </div>
           <div>
-            <h1>Inventario</h1>
+            <img src={images} alt="imagen" className='icono-inicio2' />
           </div>
           <div>
-            <h1>Nómina</h1>
-          </div>
-          <div>
-            <h1>Analítica</h1>
+            <img src={images} alt="imagen" className='icono-inicio2' />
           </div>
         </Slider>
       </div>
-      <div className='seccion-derecha w-2/5 flex flex-col justify-center items-center'>
-        <p className='message2'>Tu tienda en cualquier dispositivo</p>
-        <LuMonitorSmartphone className='icono-inicio' />
+      <div className='derecha w-1/2 flex flex-col justify-center items-center'>
+      <Slider className='slider' {...settings}>
+          <div className='flex flex-col justify-center items-center'>
+            <h1 className='descripcion'>FACTURAS</h1>
+            <p className='sub-descripcion'>Controla las ventas de tu negocio generando facturas en segundos</p>
+          </div>
+          <div className='flex flex-col justify-center items-center'>
+            <h1 className='descripcion'>INVENTARIO</h1>
+            <p className='sub-descripcion'>Conoce toda la información de ts productos</p>
+          </div>
+          <div className='flex flex-col justify-center items-center'>
+            <h1 className='descripcion'>NÓMINA</h1>
+            <p className='sub-descripcion'>Maneja la información de tus empleados de forma segura</p>
+          </div>
+          <div className='flex flex-col justify-center items-center'>
+            <h1 className='descripcion'>CONOCE TU NEGOCIO</h1>
+            <p className='sub-descripcion'>Encuentra analítica de datos de tu empresa y hazla crecer</p>
+          </div>
+        </Slider>
       </div>
     </div>
-
-    <IoIosPhonePortrait className='icono-inicio2' />
 
   </div>
 </>

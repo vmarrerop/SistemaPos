@@ -11,17 +11,17 @@
 }
 
 .title {
-  font-size: 98px;
+  font-size: 90px;
   font-weight: bolder;
   text-align: center;
   color: white;
   font-family: 'Merriweather Sans', sans-serif;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .seccion-titulo {
-  margin-bottom: 80px;
+  margin-bottom: 5px;
   padding: 2px;
   margin: 20px;
 }
@@ -49,8 +49,7 @@
   color: #764dca;
   font-size: 30px;
   line-height: 1;
-  margin-bottom: 50px;
-  margin-top: 90px;
+  margin-top: 70px;
 }
 
 .message2 {
@@ -64,13 +63,12 @@
 .message-capsule{
   display: flex;
   margin-inline: 40px;
-  margin-bottom: 50px;
 }
 
 .message-capsule2{
-  display: flex;
   margin-inline: 70px;
   margin-bottom: 50px;
+  background-color: red;
 }
 
 .icono-inicio {
@@ -79,8 +77,8 @@
 }
 
 .icono-inicio2 {
-  font-size: 500px;
-  color: white;
+  width: 150px;
+  height: 200px;
 }
 
 hr {
@@ -90,11 +88,24 @@ hr {
 }
 
 .slider {
-  text-align: center;
-  font-size: 35px;
-  color: #33b3ae;
-  width: 150px;
-  height: 100px;
-  font-family: 'Bebas Neue', sans-serif;
-  margin-top: 20px;
+  width: 200px;
+}
+
+.descripcion {
+  font-family: 'Merriweather Sans', sans-serif;
+  text-align: left;
+  color: #764dca;
+  font-size: 25px;
+  line-height: 1;
+  margin-left: 2px;
+  margin-bottom: 10px;
+}
+
+.sub-descripcion {
+  font-family: 'Merriweather Sans', sans-serif;
+  text-align: left;
+  color: white;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-left: 2px;
 }
