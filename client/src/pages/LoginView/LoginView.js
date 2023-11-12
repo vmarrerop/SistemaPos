@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.scss';
 import { LuMonitorSmartphone } from 'react-icons/lu'
+import { IoIosPhonePortrait } from 'react-icons/io'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -33,18 +34,22 @@ export function LoginView () {
         
       </div>
     </div>
-    <h1 className="title pos">
-      Caja Maestra
-    </h1>
-    <Link to="/services" className="services-buttonn ">
-      INGRESAR
-    </Link>
-    <hr></hr>
+
+
+     <div className='seccion-titulo flex flex-col justify-center items-center'>
+        <h1 className="title pos">
+          Caja Maestra
+        </h1>
+        <br></br>
+        <Link to="/services" className="services-buttonn ">
+          INGRESAR
+        </Link>
+     </div>
 
     
 
     <div className='message-capsule2'>
-      <div className='seccion-izquierda w-2/3 flex flex-col justify-center items-center'>
+      <div className='seccion-izquierda w-3/5 flex flex-col justify-center items-center'>
         <Slider className="slider" {...settings}>
           <div>
             <h1>Facturación</h1>
@@ -60,11 +65,14 @@ export function LoginView () {
           </div>
         </Slider>
       </div>
-      <div className='seccion-derecha w-1/3 flex flex-row justify-center items-center'>
+      <div className='seccion-derecha w-2/5 flex flex-col justify-center items-center'>
         <p className='message2'>Tu tienda en cualquier dispositivo</p>
         <LuMonitorSmartphone className='icono-inicio' />
       </div>
     </div>
+
+    <IoIosPhonePortrait className='icono-inicio2' />
+
   </div>
 </>
   );
