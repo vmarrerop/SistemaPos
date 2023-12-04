@@ -1,0 +1,124 @@
+/* Estilos para el header */
+.header {
+  position: fixed; /* Fija el encabezado en la ventana del navegador */
+  top: 0; /* Lo posiciona en la parte superior */
+  left: 50%; /* Lo posiciona en el centro horizontal */
+  transform: translateX(-50%); /* Lo desplaza hacia la izquierda en un 50% de su propio ancho */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgba(182, 182, 182, 0.856); /* Color de fondo del encabezado */
+  color: #fff; /* Color del texto y de los íconos */
+  z-index: 999; /* Asegura que esté por encima de otros elementos */
+  margin-top: 20px;
+  border-radius: 50px;
+  width: 50%;
+}
+
+
+/* Estilos para el contenido izquierdo */
+.left-content {
+  flex: 1;
+}
+
+/* Estilos para el contenido central (botón de opciones y ventana modal) */
+.center-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-button {
+  color: white;
+  text-decoration: none;
+}
+
+.options-button:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el contenido derecho (logo de cuenta) */
+.right-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Estilos para el botón "Cerrar" dentro de la ventana modal */
+.close {
+  background-color: #4285F4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+
+  &:hover {
+    background-color: #c82333;
+  }
+}
+
+.close-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sistema {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.icon1 {
+    font-size: 20px;
+    color: #0F9D58;
+  }
+  .icon-label1 {
+    color: #0F9D58;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .icon-label2 {
+    color: #F4B400;
+    font-size: 20px;
+    font-weight: bolder;
+
+  }
+  
+  .icon-container{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background-color: white;
+    border-color: #4285F4;
+    border-radius: 20px;
+    width: 120px;
+    height: auto;
+    margin-inline: 20px;
+  }
+
+  .icon-containerModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-color: #4285F4;
+    border-width: 3px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .modal-content {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 10px;
+    width: 80%; /* Ancho del 80% */
+    margin: 0 auto;
+}
