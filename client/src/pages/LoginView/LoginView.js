@@ -1,29 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.scss';
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import images from './productos.jpg'
+import { FaPlay } from "react-icons/fa";
 
 
 export function LoginView () {
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 0,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000, // Ajusta la velocidad de reproducción según tus necesidades
-    cssEase: 'linear',
-    arrows: false,
-  };
-
   return (
     <>
+    <h1 className='train'> <span className='trainMini'> powered by </span> TRAIN | Caja Maestra</h1>
   <div className="main-container min-h-screen flex flex-col justify-center items-center">
+    
+    <div className='inicio flex flex-col justify-center items-center'>
     
     <div className='message-capsule'>
       <div className='seccion-izquierda w-2/3 flex flex-col justify-center items-center'>
@@ -34,56 +24,56 @@ export function LoginView () {
       </div>
     </div>
     
-    
-
      <div className='seccion-titulo flex flex-col justify-center items-center'>
-        <h1 className="title pos">
-          Caja Maestra
+        <h1 className="text-7xl sm:text-8xl md:text-8xl lg:text-8xl xl:text-9xl pos title">
+          CAJA MAESTRA
         </h1>
         <br></br>
-        <Link to="/services" className="services-buttonn ">
-          INGRESAR
+
+        <Link to="/services" className="play arrow">
+          <FaPlay />
         </Link>
+
      </div>
 
-    
-    <div className='message-capsule'>
-      <div className='seccion-izquierda w-1/2 flex flex-col justify-center items-center'>
-        <Slider className='slider' {...settings}>
-          <div>
-            <img src={images} alt="imagen" className='icono-inicio2' />
-          </div>
-          <div>
-            <img src={images} alt="imagen" className='icono-inicio2' />
-          </div>
-          <div>
-            <img src={images} alt="imagen" className='icono-inicio2' />
-          </div>
-        </Slider>
+     {/* Flecha a la izquierda */}
+     <div className="arrow left absolute bottom-0 left-0 mb-4 ml-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className="h-8 w-8 text-white transform rotate-180"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M5 10l7-7m0 0l7 7m-7-7v18"
+          />
+        </svg>
       </div>
-      <div className='derecha w-1/2 flex flex-col justify-center items-center'>
-      <Slider className='slider' {...settings}>
-          <div className='flex flex-col justify-center items-center'>
-            <h1 className='descripcion'>FACTURAS</h1>
-            <p className='sub-descripcion'>Controla las ventas de tu negocio generando facturas en segundos</p>
-          </div>
-          <div className='flex flex-col justify-center items-center'>
-            <h1 className='descripcion'>INVENTARIO</h1>
-            <p className='sub-descripcion'>Conoce toda la información de ts productos</p>
-          </div>
-          <div className='flex flex-col justify-center items-center'>
-            <h1 className='descripcion'>NÓMINA</h1>
-            <p className='sub-descripcion'>Maneja la información de tus empleados de forma segura</p>
-          </div>
-          <div className='flex flex-col justify-center items-center'>
-            <h1 className='descripcion'>CONOCE TU NEGOCIO</h1>
-            <p className='sub-descripcion'>Encuentra analítica de datos de tu empresa y hazla crecer</p>
-          </div>
-        </Slider>
+
+      {/* Flecha a la derecha */}
+      <div className="arrow right absolute bottom-0 right-0 mb-4 mr-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className="h-8 w-8 text-white transform rotate-180"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M5 10l7-7m0 0l7 7m-7-7v18"
+          />
+        </svg>
       </div>
     </div>
 
-    <footer className='footer'>POWERED BY Train | Caja Maestra</footer>
+    <footer className='footer'>powered by TRAIN | Caja Maestra</footer>
 
   </div>
 </>
