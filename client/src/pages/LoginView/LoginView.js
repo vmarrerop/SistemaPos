@@ -30,7 +30,7 @@ export function LoginView () {
         </h1>
         <br></br>
 
-        <Link to="/services" className="play arrow">
+        <Link to="/services" className="play">
           <FaPlay />
         </Link>
 

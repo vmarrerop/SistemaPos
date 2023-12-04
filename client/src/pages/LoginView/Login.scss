@@ -62,6 +62,7 @@
   margin-top: 80px;
   color: white;
   font-size: 50px;
+  animation: bounce 1s infinite alternate;
 
   &:hover {
     color: rgb(196, 196, 196);
@@ -72,7 +73,7 @@
   font-family: 'Noto Sans Display', sans-serif;
   text-align: left;
   color: rgb(179, 179, 179);
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1;
   margin-top: 70px;
 }
@@ -93,15 +94,15 @@ hr {
 }
 
 .arrow {
-  animation: bounce 1s infinite alternate;
+  animation: bouncee 1s infinite alternate;
 }
 
-@keyframes bounce {
+@keyframes bouncee {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-25px);
+    transform: translateY(-50px);
   }
 }
 
@@ -114,6 +115,6 @@ hr {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
   }
 }
