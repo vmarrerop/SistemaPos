@@ -153,7 +153,7 @@ export function LoginView () {
     <div className='informacion w-full flex flex-col sm:flex-row primera'>
       <div className='w-full sm:w-1/2 flex flex-col justify-center items-center'>
         <h1 className='sub-title'>ADMINISTRA TUS PRODUCTO FÁCILMENTE</h1>
-        <p className='text-md sm:text-8xl md:text-8xl lg:text-8xl xl:text-xl sub-title2'>Para mostrar 5 productos por fila en lugar de uno debajo del otro, puedes ajustar la estructura de la tabla y aplicar algunas clases adicionales para controlar el diseño. Aquí tienes un ejemplo de cómo podrías modificar el código:</p>
+        <p className='text-md sm:text-2xl md:text-xl lg:text-2xl xl:text-xl sub-title2'>Para mostrar 5 productos por fila en lugar de uno debajo del otro, puedes ajustar la estructura de la tabla y aplicar algunas clases adicionales para controlar el diseño. Aquí tienes un ejemplo de cómo podrías modificar el código:</p>
       </div>
 
       <div className='w-full sm:w-1/2 flex justify-center items-center'>
@@ -194,16 +194,9 @@ export function LoginView () {
       </div>
     </div>
 
-    <div className='w-full flex flex-col sm:flex-row'>
-      
-    <div className='w-full sm:w-1/2 flex flex-col justify-center items-center'>
+
+    <div className='w-full sm:w-full flex flex-col justify-center items-center'>
       {mostrarInformacionFactura()}
-    </div>
-
-      <div className='w-full sm:w-1/2 flex justify-center items-center'>
-        <h1 className='sub-title'>CREA TUS FACTURAS</h1>
-      </div>
-
     </div>
 
 
