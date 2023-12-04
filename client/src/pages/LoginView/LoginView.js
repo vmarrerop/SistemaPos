@@ -194,7 +194,7 @@ export function LoginView () {
       </div>
     </div>
 
-    <div className='informacion w-full flex flex-col sm:flex-row'>
+    <div className='w-full flex flex-col sm:flex-row'>
       
     <div className='w-full sm:w-1/2 flex flex-col justify-center items-center'>
       {mostrarInformacionFactura()}
